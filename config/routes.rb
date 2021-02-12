@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'menu' => 'access#menu'
+  get 'login' =>'access#new'
+  get "logout" => "access#destroy"
+  resource :access, controller: 'access', except: [:show, :edit, :update] do
+  	member do
+  		get :menu
+  	end
+  end
 end
