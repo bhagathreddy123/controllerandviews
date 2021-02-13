@@ -9,6 +9,7 @@ class AccessController < ApplicationController
   end
 
   def create
+  	logger.info("Login Process started in Create Action")
   	cookies[:username] = params[:username]
   	session[:language] = "en"
   	flash[:notice]="Login Successful"

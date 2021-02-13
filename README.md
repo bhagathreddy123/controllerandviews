@@ -56,3 +56,12 @@ Require time to retrieve the session file.
 Session files accumulate.
 Session cookie resides  on the users computer
 Session cookie can be deleted or hijacked.
+
+clear the Log files
+rails log:clear
+
+logger.debug("The name is #{@subject.name}")
+logger.info("Starting the subject update....")
+logger.warn("Invalid log in By #{params[:username]}")
+logger.error
+logger.fatal
