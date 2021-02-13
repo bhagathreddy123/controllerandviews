@@ -11,6 +11,7 @@ class AccessController < ApplicationController
   def create
   	cookies[:username] = params[:username]
   	session[:language] = "en"
+  	flash[:notice]="Login Successful"
   	redirect_to menu_path
   end
 
