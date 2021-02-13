@@ -44,3 +44,15 @@ do not store model instance.
 do not store sensitive data.
 do not trust cookie data.
 
+Sessions
+
+Web server sends a session ID to the browser, which then saves it in a cookie
+Browser sends session ID with each future request to that web server.
+
+web server uses session ID to locate the session file.
+
+Common Limitations of Sessions.
+Require time to retrieve the session file.
+Session files accumulate.
+Session cookie resides  on the users computer
+Session cookie can be deleted or hijacked.

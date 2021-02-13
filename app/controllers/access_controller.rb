@@ -2,6 +2,7 @@ class AccessController < ApplicationController
   
   def menu
   	@username = cookies[:username]
+  	@language = session[:language]
   end
 
   def new
@@ -9,6 +10,7 @@ class AccessController < ApplicationController
 
   def create
   	cookies[:username] = params[:username]
+  	session[:language] = "en"
   	redirect_to menu_path
   end
 
