@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pages
   get 'subjects/index'
   get 'subjects/new'
   get 'subjects/edit'

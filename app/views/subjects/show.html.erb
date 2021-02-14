@@ -24,6 +24,10 @@
       <td><%= truncate(@subject.description, line_width: 20) %></td>
     </tr>
     <tr>
+      <th>Pages Count</th>
+      <td><%=  pluralize(@subject.pages.count, "Page") %></td>
+    </tr>
+    <tr>
       <th>Created</th>
       <td><%= @subject.created_at.to_s(:long) %></td>
     </tr>

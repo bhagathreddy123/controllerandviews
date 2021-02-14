@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_055136) do
+ActiveRecord::Schema.define(version: 2021_02_14_075013) do
+
+  create_table "pages", force: :cascade do |t|
+    t.string "name"
+    t.string "permalink"
+    t.integer "position"
+    t.text "content"
+    t.boolean "visible"
+    t.integer "subject_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_pages_on_subject_id"
+  end
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
@@ -21,4 +33,5 @@ ActiveRecord::Schema.define(version: 2021_02_14_055136) do
     t.text "description"
   end
 
+  add_foreign_key "pages", "subjects"
 end
