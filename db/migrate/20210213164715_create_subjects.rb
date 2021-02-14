@@ -6,6 +6,6 @@ class CreateSubjects < ActiveRecord::Migration[6.0]
       t.boolean :visiable
 
       t.timestamps
-    end
+    end   
   end
 end

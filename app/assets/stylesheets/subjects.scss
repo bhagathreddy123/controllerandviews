@@ -1,3 +1,12 @@
 // Place all the styles related to the subjects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+span.status {
+	display: block;
+	width: 10px; height: 10px;
+	margin: 0.25cm;padding: 0;
+	border: 1px solid black;
+	&.true { background: green;}
+	&.false { background: red;}
+}
