@@ -59,7 +59,7 @@ Session cookie can be deleted or hijacked.
 
 clear the Log files
 rails log:clear
-
+https://github.com/LinkedInLearning/ror6-controllersandviews_2309293
 logger.debug("The name is #{@subject.name}")
 logger.info("Starting the subject update....")
 logger.warn("Invalid log in By #{params[:username]}")
