@@ -201,6 +201,14 @@ assign
 render
 rendered
 
+Definitions
+------------
+Double/mock
+--------
+a simple object preprogrammed with expectations and responses as preparation for the calls it will receive.
+Stub: an instruction to an object to return a specific response to a method call.
+----
+
 
 
 

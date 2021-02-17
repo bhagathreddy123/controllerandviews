@@ -13,5 +13,10 @@ describe SubjectsController do
  	it "renders 'index' template" do 
  		expect(response).to render_template('index')
  	end
+ 	it "expects a call before it is received" do 
+ 		dbl = double("Chant")
+ 		expect(dbl).to receive(:hey!).and_return("Ho!")
+ 		dbl.hey!
+ 	end
  end
 end
