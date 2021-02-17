@@ -113,3 +113,13 @@ rake do more setup for run test than rspec does.
   github.com/rspec/rspec-activemodel-mocks
 
   mock_model, stub_model
+
+  Helper Specs
+  ------------
+
+  Easy to work with
+  No request/response
+  helper -  (this is aspecial obj)
+  helper object includes all of the helper modules 
+  assign instance variables they are present when ever we are using this helper methods using in view.
+  
