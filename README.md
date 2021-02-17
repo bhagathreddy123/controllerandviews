@@ -122,4 +122,54 @@ rake do more setup for run test than rspec does.
   helper -  (this is aspecial obj)
   helper object includes all of the helper modules 
   assign instance variables they are present when ever we are using this helper methods using in view.
-  
+
+controller Specs
+----------------
+Controllers are Ruby classes
+Rails creates controller instances for us
+Depends on request/response.
+Render, redirect
+set values in cookies and sessions
+Controller Spec HTTP Requests
+---------------------------
+get(action, options)
+post(action, options)
+patch(action, options)
+put(action, options)
+delete(action, options)
+
+Controller Spec HTTP Requests
+===========================
+
+get(:index)
+get("/customers/index")
+get(:index, :page => 2, :search => 'Smith')
+post(:create, :customer => {:first_name => 'Jane', :last_name => 'Smith', :country => 'US'})
+
+Controller Spec Attributes
+--------------------------
+
+controller 
+request
+response
+
+assigns - assigns is used to set up instance variable and shows up in assigns hash.
+
+session : object is saved in sessions file
+
+flash : flash objects or flash messages currently in session
+
+cookies : cookies set back to the user on request
+assigns has been extracted to a gem. To continue using it, add gem 'rails-controller-testing' to your Gemfile
+
+controller Spec Attributes
+
+assigns['subjects']
+assigns[:subjects] # does not work
+
+assigns('subjects')
+assigns(:subjects)
+
+cookies['logged_in']
+request.cookies['logged_in']
+response.cookies['logged_in']
