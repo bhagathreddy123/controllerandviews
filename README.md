@@ -65,3 +65,8 @@ logger.info("Starting the subject update....")
 logger.warn("Invalid log in By #{params[:username]}")
 logger.error
 logger.fatal
+
+$ rails g rspec:install
+$ rspec or bundle exec rspec or  rake spec or rake
+
+rake do more setup for run test than rspec does.
