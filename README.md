@@ -173,3 +173,30 @@ assigns(:subjects)
 cookies['logged_in']
 request.cookies['logged_in']
 response.cookies['logged_in']
+
+controller Spec Response Matchers
+
+expect(response).to render_template( template )
+expect(response).to redirect_to( path )
+expect(response).to have_http_status( status )
+
+Rails Status Codes
+-----------------
+200, :ok
+403, :forbidden
+404, :not_found
+301, :moved_permanently
+302, :found
+500, :internal_server_error
+502, :bad_gateway
+
+
+
+
+
+
+
+
+
+
+
