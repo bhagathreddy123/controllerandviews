@@ -70,3 +70,31 @@ $ rails g rspec:install
 $ rspec or bundle exec rspec or  rake spec or rake
 
 rake do more setup for run test than rspec does.
+ rspec spec does not prepare test database
+ rake spec prepare test database.
+
+ Transactional Examples
+ Each example runs in a transaction
+ Database changes are rolled back at the end.
+
+ spec/rails_helper.rb
+ --------------
+ config.use_transactional_fixtures=true
+
+ Transactional Examples
+ -----------------------
+ Data modified by before(:example) is rolled back.
+ Data modified by before(:context) is not rolled back.
+ improve performance for example group.
+ use after(:context) tp revert modified data.
+
+ before(:context) to make data cleanup our responsibility
+
+
+ desscribe Customer do
+  before(:context) do 
+   @customer = Customer.create(:name => 'Jane smith')
+  end
+
+  after(:context) {@customer.destroy}
+ end
