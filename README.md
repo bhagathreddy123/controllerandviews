@@ -98,3 +98,18 @@ rake do more setup for run test than rspec does.
 
   after(:context) {@customer.destroy}
  end
+
+ Model Specs
+  May need to call #reload after database changes
+  Lazy-executing #let vs. eager-executing #let!
+  scopes: match_array works with ActiveRecord::Relations
+
+  Associations, validations
+  -------------------------
+  github.com/thoughtbot/shoulda-matchers
+
+  ActiveRecord test doubles
+  ---------------------------
+  github.com/rspec/rspec-activemodel-mocks
+
+  mock_model, stub_model
