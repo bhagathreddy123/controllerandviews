@@ -190,7 +190,16 @@ Rails Status Codes
 500, :internal_server_error
 502, :bad_gateway
 
+View Specs
+=============
+make instance variable assignments
+Reder the template
+set expetations on what is returned
 
+view
+assign
+render
+rendered
 
 
 
